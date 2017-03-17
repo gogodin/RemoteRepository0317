@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+compileJava.options.encoding = 'UTF-8'
+sourceCompatibility = 1.7			//閮剖�楊霅舫�挾��DK��
+sourceSets.main.java.srcDir 'src'	//雿輻src���蝵埃ava蝔���Ⅳ
+									//��身雿蔭�src/main/java����
+repositories {
+mavenLocal()					//雿輻maven  central repository
+	mavenCentral()					//雿輻maven  central repository
+}
+dependencies {						//摰���ependency library
+// https://mvnrepository.com/artifact/org.springframework/spring-web
+compile group: 'org.springframework', name: 'spring-web', version: '4.2.6.RELEASE'
+// https://mvnrepository.com/artifact/org.hibernate/hibernate-annotations
+compile group: 'org.hibernate', name: 'hibernate-annotations', version: '3.5.1-Final'
+
+}
